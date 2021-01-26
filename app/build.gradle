@@ -14,7 +14,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
+        buildConfigField "String", "APP_BASE_URL", '"https://api.github.com"'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {
@@ -24,12 +24,31 @@ android {
         }
     }
 
+
+
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        development{
+            buildConfigField 'String', 'APP_BASE_URL', '"https://api.timburtons.com/"';
         }
+        quality{
+            buildConfigField 'String', 'APP_BASE_URL', '"https://api.timburtons.com/"';
+        }
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'ENVIRONMENT', '"PRODUCTION"';
+            buildConfigField 'String', 'APP_BASE_URL', '"https://api.timburtons.com/"';
+        }
+
+//        release {
+//            minifyEnabled false
+//            buildConfigField 'String', 'API_URL', '"https://api.timburtons.com/"';
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
     }
+
+
 
     dataBinding {
         enabled = true
