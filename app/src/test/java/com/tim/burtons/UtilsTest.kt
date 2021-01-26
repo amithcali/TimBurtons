@@ -21,7 +21,7 @@ class UtilsTest {
         every { Utils.getProducts().size } returns 5
     }
     @Test
-    fun willUseMockBehaviour() {
+    fun testSearchProductSize() {
         assertEquals(5, Utils.getProducts().size)
     }
 
