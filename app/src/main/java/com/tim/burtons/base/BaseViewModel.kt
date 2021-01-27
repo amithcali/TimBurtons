@@ -1,4 +1,4 @@
-package com.locqum.doctor.base
+package com.tim.burtons.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
