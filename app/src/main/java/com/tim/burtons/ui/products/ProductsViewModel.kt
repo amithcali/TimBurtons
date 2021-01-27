@@ -2,7 +2,7 @@ package com.tim.burtons.ui.products
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
-import com.locqum.doctor.base.BaseViewModel
+import com.tim.burtons.base.BaseViewModel
 import com.tim.burtons.data.api.Resource
 import com.tim.burtons.data.repo.ProductsRepository
 import com.tim.burtons.model.Product
