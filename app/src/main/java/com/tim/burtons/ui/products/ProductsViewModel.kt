@@ -12,6 +12,7 @@ import kotlinx.coroutines.Dispatchers
 class ProductsViewModel @ViewModelInject constructor(private val productsRepository: ProductsRepository) : BaseViewModel() {
 
 
+    /* add a branch */
     init {
         getProducts()
     }
