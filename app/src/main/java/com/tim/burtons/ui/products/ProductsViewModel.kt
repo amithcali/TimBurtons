@@ -53,6 +53,7 @@ class ProductsViewModel @ViewModelInject constructor(private val productsReposit
             Resource.Status.LOADING -> {
                 setLoading()
             }
+
             Resource.Status.SUCCESS -> {
                 setSuccess()
                 _products = response.data as ArrayList<Product>
