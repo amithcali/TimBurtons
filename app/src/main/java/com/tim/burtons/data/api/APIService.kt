@@ -1,5 +1,7 @@
 package com.tim.burtons.data.api
 
+
+import com.tim.burtons.BuildConfig
 import com.tim.burtons.model.Product
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,7 +16,7 @@ interface APIService {
     suspend fun getUsers(): List<Product>
 
     companion object {
-        private const val BASE_URL = "https://api.timburtons.com/"
+       // private const val BASE_URL = "https://api.timburtons.com/"
 
         fun create(): APIService {
             val logger = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC }
@@ -24,7 +26,7 @@ interface APIService {
                 .build()
 
             return Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(BuildConfig.APP_BASE_URL)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

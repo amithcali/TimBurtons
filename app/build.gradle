@@ -23,7 +23,28 @@ android {
             }
         }
     }
+    signingConfigs {
+        development {
+            storeFile file("development.keystore")
+            storePassword ""
+            keyAlias ""
+            keyPassword ""
+        }
 
+        quality {
+            storeFile file("quality.keystore")
+            storePassword ""
+            keyAlias ""
+            keyPassword ""
+        }
+
+        release {
+            storeFile file("release.keystore")
+            storePassword ""
+            keyAlias ""
+            keyPassword ""
+        }
+    }
 
 
     buildTypes {
@@ -113,6 +134,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.3.0-rc01'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-rc01'
     testImplementation "org.robolectric:robolectric:3.8"
+    androidTestImplementation 'com.google.code.findbugs:jsr305:3.0.2'
 
 
 }

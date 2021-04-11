@@ -1,4 +1,4 @@
-package com.tim.burtons.ui.products
+ package com.tim.burtons.ui.products
 
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
@@ -35,7 +35,7 @@ class ProductsViewModel @ViewModelInject constructor(private val productsReposit
             resetData()
         }
 
-        val filteredProducts = _products.filter { it.name?.contains(searchText!!, true) ?: false } as ArrayList<Product>
+        val filteredProducts  = _products.filter { it.name?.contains(searchText!!, true) ?: false } as ArrayList<Product>
         _productsLiveData.value = filteredProducts
     }
 
