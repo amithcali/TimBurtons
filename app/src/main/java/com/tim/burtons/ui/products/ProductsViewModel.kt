@@ -15,6 +15,7 @@ class ProductsViewModel @ViewModelInject constructor(private val productsReposit
     /* add a branch */
     /* new line is added in the master */
     /* rebase practice */
+    /* new lines are added */
     init {
         getProducts()
     }
