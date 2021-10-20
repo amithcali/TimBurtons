@@ -19,6 +19,7 @@ class ProductsViewModel @ViewModelInject constructor(private val productsReposit
     init {
         getProducts()
 /*testing new bracch */
+        /*test 2 with same line */
     }
 
     private var _products = arrayListOf<Product>()
