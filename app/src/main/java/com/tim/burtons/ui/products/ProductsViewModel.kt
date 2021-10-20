@@ -26,6 +26,9 @@ class ProductsViewModel @ViewModelInject constructor(private val productsReposit
 
     }
 
+    /* hello again ne w line */
+
+
     private var _products = arrayListOf<Product>()
 
     private var _productsLiveData = MutableLiveData<List<Product>>()
